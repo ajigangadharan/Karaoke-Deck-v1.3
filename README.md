@@ -1,11 +1,12 @@
-[KaraokeDeck-Windows-x64-V7-Final-README.md](https://github.com/user-attachments/files/34861722/KaraokeDeck-Windows-x64-V7-Final-README.md)
-# Karaoke-Deck-V1# Karaoke Deck
+# Karaoke Deck
+
+**Website:** https://ajigangadharan.github.io/Karaoke-Deck-V1/ · **Download:** [latest release](https://github.com/ajigangadharan/Karaoke-Deck-V1/releases/latest)
 
 A simple two-deck audio/video player for live singers, with a lyrics pane built in. Everything is in one window: two decks at the top, your song list below, and lyrics on the right.
 
 ## Install on Windows (no setup needed)
 
-1. Download **KaraokeDeck-Windows-x64.zip** and unzip it somewhere permanent, for example `C:\Karaoke Deck` or `D:\Apps\Karaoke Deck`.
+1. Download the **KaraokeDeck-Windows-x64** zip from the [latest release](https://github.com/ajigangadharan/Karaoke-Deck-V1/releases/latest) and unzip it somewhere permanent, for example `C:\Karaoke Deck` or `D:\Apps\Karaoke Deck`.
 2. Open the folder and double-click **Karaoke Deck.exe**.
 3. The first time, Windows may show "Windows protected your PC" because the app is not code-signed. Click **More info**, then **Run anyway**.
 4. Optional: right-click `Karaoke Deck.exe` and choose **Send to > Desktop (create shortcut)**.
@@ -95,18 +96,3 @@ Converted automatically the first time, then cached: WMA, AIFF, AC3, DTS, APE, A
 - Close the floating windows you are not using, and keep reverb at 0% on decks that don't need it (reverb only uses CPU while it is above 0%).
 - The first time a song is loaded, the app reads its waveform and BPM in the background; after that they are remembered.
 - If your laptop is on battery, plug it in. Windows slows the processor on battery, which can make any player stutter.
-
-## Running from the source code (for developers)
-
-Requires Node.js 20 or newer.
-
-```
-npm install
-npm start
-```
-
-- `npm test` runs the BPM and key-change unit tests.
-- `xvfb-run -a node test/e2e.js <fixtures-dir>` runs the end-to-end test against the real app (Linux).
-- `scripts/package-win.sh <work-dir> <output.zip>` builds the Windows zip.
-
-How it is built: Electron (Chromium) for the window and playback, a local backend bound to 127.0.0.1 with a random access token for file access, ffmpeg for format conversion and BPM analysis, a phase-vocoder AudioWorklet for key change, pdf.js for PDFs and mammoth for Word files.

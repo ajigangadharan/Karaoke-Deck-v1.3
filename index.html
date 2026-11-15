@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karaoke Deck</title>
+<meta name="description" content="A free two-deck karaoke player for live singers on Windows: key and tempo change, waveform, playlists and a built-in lyrics pane.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#0f1117;color:#e6e8ee;font-family:Inter,"Segoe UI",Arial,sans-serif;line-height:1.55}
+  a{color:#ffb547}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+  header{padding:56px 0 32px;text-align:center}
+  h1{font-size:44px;font-weight:800;margin:0 0 8px;letter-spacing:-.5px}
+  h1 span{color:#ffb547}
+  .lead{font-size:19px;color:#aab0bf;max-width:680px;margin:0 auto 28px}
+  .btn{display:inline-block;background:#ffb547;color:#14161d;font-weight:800;text-decoration:none;padding:14px 26px;border-radius:10px;font-size:17px}
+  .btn:hover{background:#ffc66e}
+  .small{font-size:14px;color:#8a90a0;margin-top:12px}
+  .shot{display:block;width:100%;height:auto;border-radius:12px;border:1px solid #262a36;box-shadow:0 12px 40px #00000080}
+  section{padding:40px 0}
+  h2{font-size:28px;margin:0 0 20px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  .card{background:#171a23;border:1px solid #262a36;border-radius:12px;padding:18px}
+  .card h3{margin:0 0 6px;font-size:17px;color:#ffb547}
+  .card p{margin:0;color:#c3c8d4;font-size:15px}
+  .pics{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;align-items:start}
+  .pics figure{margin:0}
+  .pics figcaption{font-size:14px;color:#8a90a0;margin-top:6px}
+  ol li{margin-bottom:8px}
+  code{background:#232734;padding:2px 6px;border-radius:5px;font-size:14px}
+  footer{border-top:1px solid #262a36;padding:24px 0 40px;color:#8a90a0;font-size:14px}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <h1>Karaoke <span>Deck</span></h1>
+  <p class="lead">A two-deck player made for live singers. Change key and tempo, watch the waveform, keep your playlists, and read your lyrics in the same window while you are live on TikTok, Facebook or YouTube.</p>
+  <a class="btn" id="dl" href="#download">Download for Windows (free)</a>
+  <p class="small">Windows 10 / 11, 64-bit · about 150 MB · no installation needed</p>
+</header>
+
+<div class="wrap"><img class="shot" src="images/main.png" alt="Karaoke Deck main window with two decks, song list and lyrics pane"></div>
+
+<section class="wrap">
+  <h2>What it does</h2>
+  <div class="grid">
+    <div class="card"><h3>Two independent decks</h3><p>Load the next song while one plays. Each deck has its own volume, preview button and output.</p></div>
+    <div class="card"><h3>Key and tempo</h3><p>Key up or down 5 half-steps without changing speed. Tempo ±30% without changing key. Works for audio and video.</p></div>
+    <div class="card"><h3>DJ-style waveform</h3><p>See silences at the start, middle and end of a song before they catch you out on a live.</p></div>
+    <div class="card"><h3>Lyrics built in</h3><p>Your lyrics folders (PDF, Word, TXT, pictures) and lyrics websites, inside the player or in a floating window.</p></div>
+    <div class="card"><h3>Big karaoke video</h3><p>Pop the video out into its own window, full screen or always on top. It remembers where you put it.</p></div>
+    <div class="card"><h3>Smart search</h3><p>Finds songs from any part of the name, even with spelling differences in Malayalam-English names.</p></div>
+    <div class="card"><h3>Playlists and folders</h3><p>Playlists with export and import, virtual folders that never move your files, rename on disk.</p></div>
+    <div class="card"><h3>Any format</h3><p>MP3, WAV, FLAC, M4A, MP4, MKV and more. Unusual formats (WMA, AVI, VOB…) are converted automatically.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Screens</h2>
+  <div class="pics">
+    <figure><img class="shot" src="images/waveform.png" alt="Waveform of a deck"><figcaption>Waveform with silence warning</figcaption></figure>
+    <figure><img class="shot" src="images/video.png" alt="Floating video window"><figcaption>Floating karaoke video window</figcaption></figure>
+    <figure><img class="shot" src="images/lyrics.png" alt="Floating lyrics window"><figcaption>Floating lyrics window</figcaption></figure>
+  </div>
+</section>
+
+<section class="wrap" id="download">
+  <h2>Install</h2>
+  <ol>
+    <li><a id="dl2" href="#">Open the download page</a> and click the <b>KaraokeDeck-Windows-x64</b> zip file under <b>Assets</b>.</li>
+    <li>Right-click the zip, choose <b>Extract All</b>, and put the folder somewhere permanent, for example <code>C:\Karaoke Deck</code>.</li>
+    <li>Double-click <b>Karaoke Deck.exe</b>. If Windows says "Windows protected your PC", click <b>More info</b>, then <b>Run anyway</b> (the app is not code-signed yet).</li>
+    <li>Add your music folders with <b>+</b>, then pick your outputs in <b>⚙ Settings</b>.</li>
+  </ol>
+</section>
+
+<footer class="wrap">
+  Karaoke Deck uses FFmpeg (GPL), Electron, PDF.js and mammoth. See THIRD-PARTY-NOTICES.txt inside the download.
+</footer>
+
+<script>
+  // Points the download buttons at the newest GitHub release of this repository.
+  (function(){
+    var host = location.hostname, parts = location.pathname.split('/').filter(Boolean);
+    if (/\.github\.io$/.test(host)) {
+      var user = host.split('.')[0];
+      var repo = parts.length ? parts[0] : host;
+      var url = 'https://github.com/' + user + '/' + repo + '/releases/latest';
+      document.getElementById('dl').href = url;
+      document.getElementById('dl2').href = url;
+    }
+  })();
+</script>
+</body>
+</html>
