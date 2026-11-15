@@ -41,7 +41,7 @@ Nothing else needs to be installed. The converter for unusual formats (ffmpeg) i
 | Reverb | **FX Reverb**: 0% = off. **↺** at the end of the FX row resets both |
 | Reset a deck | **↺ Reset** sets tempo, key, width, reverb, volume and preview back to normal. Loading a new song always resets tempo, key, width and reverb |
 | Find new songs you just copied into the folder | **⟳ Refresh** (or F5) |
-| Search songs | Type any part of the name in the filter box. Smart search: words can be anywhere and in any order, `_ - .` and spaces are ignored, and small spelling differences still match (mounagal finds Mounangal, ende finds Ente). Best matches come first. The same words also search your lyrics folders |
+| Search songs | Type any part of the name in the filter box. The **File name** column shows the real file name on disk, extension included (long names wrap onto two lines instead of being cut off). Smart search: words can be anywhere and in any order, `_ - .` and spaces are ignored, and small spelling differences still match (mounagal finds Mounangal, ende finds Ente). Best matches come first. The same words also search your lyrics folders |
 | Column widths | Drag the right edge of any column title. Double-click the edge for the default. Remembered |
 | Filter and sort | Pick audio/video only or a sub-folder, click a music folder on the left to see only that folder, click any column title to sort (click again to reverse) |
 | Several music folders | **+** next to "Music folders". Right-click a folder to remove it from the list (nothing is deleted) |
@@ -98,4 +98,5 @@ Converted automatically the first time, then cached: WMA, AIFF, AC3, DTS, APE, A
 
 - Close the floating windows you are not using, and keep reverb at 0% on decks that don't need it (reverb only uses CPU while it is above 0%).
 - The first time a song is loaded, the app reads its waveform and BPM in the background; after that they are remembered.
+- Your song list and lyrics folders are read once and kept in memory while the app runs, and saved for the next start, so searching never waits for the folders. The very first time, the words inside your TXT and Word lyrics are read in the background (a yellow line shows how many are left); names are searchable straight away. After that only new or changed files are read. Press **⟳ Refresh** (songs) or **⟳** (lyrics) after copying in new files; the app also re-checks the folders by itself when you search, at most once a minute.
 - If your laptop is on battery, plug it in. Windows slows the processor on battery, which can make any player stutter.
